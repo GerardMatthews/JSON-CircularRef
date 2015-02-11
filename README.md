@@ -4,34 +4,34 @@ Examples for how to enable circular reference serialisation in Dot Net Web API a
 
 This is a work in progress and I hope to be adding more examples and documentation in the future.
 
-# Web API Example
+## Web API Example
 
 The Web API example utilises a code first approach for simplicity sake but the serialisation works in exactly the same manner if you are doing Database First.
 
 NB: Please note I built this example using VS 2013 Community Edition so please check the web config connection string and make sure it is pointing to the correct localdb instance as I had trouble with it.
 
-Step One
+### Step One
 
 Web API's default javascript serialiser is NewtonSoft.JSON. It supports serialisation of circular references.
 
 Under the App_Start folder add the following line to the WebAPIConfig register method. 
 
-config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.All;
+    config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.All;
 
-Step Two
+### Step Two
 
 Disable proxy generation on your DbContext Class by setting the following property to true.
 
-Configuration.ProxyCreationEnabled = false
+    Configuration.ProxyCreationEnabled = false
 
-Step Three
+### Step Three
 
 Use the dojox.json.ref extention to parse the JSON object sent down through Web API as below.
 
-dojox.json.ref.resolveJson(returnedJSONObject)
+    dojox.json.ref.resolveJson(returnedJSONObject)S
 
 
-# Dojo Framework Usage
+## Dojo Framework Usage
 
 I am curretly using the dojo frameworks dojox.json.ref extentions which have a nice and robust looking JSON parser.
 
