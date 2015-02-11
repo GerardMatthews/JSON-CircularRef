@@ -11,7 +11,8 @@ namespace DotNetMVC.Controllers {
 			//you should not be doing this in a controller but this is for demo purposes
 			var cartItems = new List<ShoppingCart>();
 			using(var context = new ShopContext()) {
-				cartItems = context.ShoppingCart.Include(s => s.Product).ToList();
+				//I have deliberatly included more entities so that we end up with a JSON object making heavy use of JSON references
+				cartItems = context.ShoppingCart.Include(s => s.Product).Include(s => s.User).ToList();
 			}
 			return cartItems;
 		}

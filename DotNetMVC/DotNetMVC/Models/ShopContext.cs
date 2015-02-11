@@ -10,8 +10,11 @@ namespace DotNetMVC.Models {
 		// 
 		// If you wish to target a different database and/or database provider, modify the 'ShopEntities' 
 		// connection string in the application configuration file.
+
 		public ShopContext()
 			: base("name=ShopEntities") {
+			//this is important because it throws an error during serialisation if not disabled
+			this.Configuration.ProxyCreationEnabled = false;
 		}
 
 		// Add a DbSet for each entity type that you want to include in your model. For more information 
