@@ -11,16 +11,21 @@ The Web API example utilises a code first approach for simplicity sake but the s
 NB: Please note I built this example using VS 2013 Community Edition so please check the web config connection string and make sure it is pointing to the correct localdb instance as I had trouble with it.
 
 Step One
+
 Web API's default javascript serialiser is NewtonSoft.JSON. It supports serialisation of circular references.
 
 Under the App_Start folder add the following line to the WebAPIConfig register method. 
 
 config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.All;
+
 Step Two
+
 Disable proxy generation on your DbContext Class by setting the following property to true.
 
 Configuration.ProxyCreationEnabled = false
+
 Step Three
+
 Use the dojox.json.ref extention to parse the JSON object sent down through Web API as below.
 
 dojox.json.ref.resolveJson(returnedJSONObject)
