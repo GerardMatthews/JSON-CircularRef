@@ -16,4 +16,4 @@ I am curretly using the dojo frameworks dojox.json.ref extentions which have a n
 
 The reason we need a parser is because Newtonsoft JSON utilises JSON referencing via ID values. I.E. Each object is assigned an ID for tracking purposes.
 
-The dojox.json.ref extentions also support JPath which is another method for generating or passing JSON objects.
+The dojox.json.ref extentions also support JPath which is another standard for generating references to JSON objects. I think this is great because if you are utilising another serialiser then you may be able to parse the JSON it produces.
