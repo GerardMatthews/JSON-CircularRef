@@ -35,6 +35,6 @@ Use the dojox.json.ref extention to parse the JSON object sent down through Web 
 
 I am curretly using the dojo frameworks dojox.json.ref extentions which have a nice and robust looking JSON parser.
 
-The reason we need a parser is because Newtonsoft JSON utilises JSON referencing via ID values. I.E. Each object is assigned an ID for tracking purposes.
+The reason we need this parser is because Newtonsoft JSON utilises JSON references via ID values. I.E. Each object is assigned an ID and reffered to later by reference.
 
-The dojox.json.ref extentions also support JPath which is another standard for generating references to JSON objects. I think this is great because if you are utilising another serialiser then you may be able to parse the JSON it produces.
+The dojox.json.ref extentions also supports JSONPath which is another standard for referencing JSON objects. I think this is great because if you are utilising another serialiser then you may be able to parse the JSON it produces.
