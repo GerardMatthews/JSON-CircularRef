@@ -195,17 +195,45 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Scripts\dojo-ref.js">
+      <DependentUpon>dojo-ref.js.bundle</DependentUpon>
+    </Content>
+    <Content Include="Scripts\dojo-ref.min.js">
+      <DependentUpon>dojo-ref.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\dojo.min.js.map">
+      <DependentUpon>dojo.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\dojo-ref.js.bundle" />
+    <Content Include="Scripts\dojo-ref.min.js.map">
+      <DependentUpon>dojo-ref.min.js</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\dojo.js" />
+    <Content Include="Scripts\dojo.min.js">
+      <DependentUpon>dojo.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\query.js" />
+    <Content Include="Scripts\query.min.js">
+      <DependentUpon>query.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\ref.js" />
+    <Content Include="Scripts\ref.min.js">
+      <DependentUpon>ref.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\schema.js" />
+    <Content Include="Scripts\schema.min.js">
+      <DependentUpon>schema.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\stamp.js" />
+    <Content Include="Scripts\stamp.min.js">
+      <DependentUpon>stamp.js</DependentUpon>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -222,6 +250,18 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\ref.min.js.map">
+      <DependentUpon>ref.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\schema.min.js.map">
+      <DependentUpon>schema.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\query.min.js.map">
+      <DependentUpon>query.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\stamp.min.js.map">
+      <DependentUpon>stamp.min.js</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

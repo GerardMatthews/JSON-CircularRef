@@ -19,11 +19,7 @@ namespace DotNetMVC {
 
 			//dojo library bundle
 			bundles.Add(new ScriptBundle("~/bundles/dojo").Include(
-				"~/Scripts/dojo.js",
-				"~/Scripts/schema.js",
-				"~/Scripts/query.js",
-				"~/Scripts/stamp.js",
-				"~/Scripts/ref.js"
+				"~/Scripts/dojo-ref.min.js"
 			));
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(

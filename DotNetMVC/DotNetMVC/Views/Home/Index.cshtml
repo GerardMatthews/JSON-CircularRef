@@ -7,13 +7,13 @@
 <div class="jumbotron">
     <h1>JSON references, Web API &amp; Dojox.JSON.Ref</h1>
     <p class="lead">These three combine to allow you to serialise data with circular references to JSON.</p>
-    <p><a href="https://github.com/GerardMatthews/JSON-CircularRef" class="btn btn-primary btn-lg">Git Repository &raquo;</a></p>
+    <p><a href="https://github.com/GerardMatthews/JSON-CircularRef" target="_blank" class="btn btn-primary btn-lg">Git Repository &raquo;</a></p>
 </div>
 <h2>Step One</h2>
-<p>Web API's default javascript serialiser is NewtonSoft.JSON. It supports serialisation of circular references.</p>
+<p>Web API's default javascript serialiser is NewtonSoft.JSON. It supports serialisation of cyclic data.</p>
 <p>Under the App_Start folder add the following line to the WebAPIConfig register method. <br><pre>config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.All;</pre></p>
 <h2>Step Two</h2>
 <p>Disable proxy generation on your DbContext Class by setting the following property to true.<br><pre>Configuration.ProxyCreationEnabled = false</pre></p>
 <h2>Step Three</h2>
 <p>Use the dojox.json.ref extention to parse the JSON object sent down through Web API as below.</p>    
-<pre>dojox.json.ref.resolveJson(returnedJSONObject)</pre>    
+<pre>dojox.json.ref.resolveJson(returnedJSONObject)</pre>
